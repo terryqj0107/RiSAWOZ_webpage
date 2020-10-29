@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--Thanks to Pranav Rajpurkar (https://rajpurkar.github.io/) and TweetQA (https://github.com/TweetQA/tweetqa.github.io) for this great leaderboard template!
+We made some modifications to our paper GECOR.-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>RiSAWOZ: A Large-Scale Multi-Domain Wizard-of-Oz Dataset with Rich Semantic Annotations for Task-Oriented Dialogue Modeling</title>
+    <meta name="description" content="In order to alleviate the shortage of multi-domain data and to capture discourse phenomena for task-oriented dialogue modeling, we propose RiSAWOZ, a large-scale multi-domain Chinese Wizard-of-Oz dataset with Rich Semantic Annotations. RiSAWOZ contains 11.2K human-to-human (H2H) multi-turn semantically annotated dialogues, with more than 150K utterances spanning over 12 domains, which is larger than all previous annotated H2H conversational datasets. Both single- and multi-domain dialogues are constructed, accounting for 65% and 35%, respectively. Each dialogue is labeled with comprehensive dialogue annotations, including dialogue goal in the form of natural language description, domain, dialogue states and acts at both the user and system side. In addition to traditional dialogue annotations, we especially provide linguistic annotations on discourse phenomena, e.g., ellipsis and coreference, in dialogues, which are useful for dialogue coreference and ellipsis resolution tasks. Apart from the fully annotated dataset, we also present a detailed description of the data collection procedure, statistics and analysis of the dataset. A series of benchmark models and results are reported, including natural language understanding (intent detection & slot filling), dialogue state tracking and dialogue context-to-text generation, as well as coreference and ellipsis resolution, which facilitate the baseline comparison for future research on this corpus.">
+    <meta name="keywords" content="RiSAWOZ: A Large-Scale Multi-Domain Wizard-of-Oz Dataset with Rich Semantic Annotations for Task-Oriented Dialogue Modeling">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta property="og:image" content="image/logo1.png">
+    <link rel="icon" href="image/favicon1.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+  
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top" id="topNavbar" role="navigation">
+      <div class="container clearfix" id="navContainer">
+        <div class="rightNav">
+          <div class="collapseDiv">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+          </div>
+        </div>
+        <div class="leftNav">
+          <div class="brandDiv">
+            <a class="navbar-brand" href="https://multinlp.github.io/GECOR/">RiSAWOZ</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="header">
+        <div id="header-desc">
+            <!-- <p style="font-size:10rem; color:whitesmoke"><b>GECOR</b></p>
+            <p style="font-size:3.5rem; color: white">Monolingual, Multilingual and Cross-lingual Reading Comprehension on Novels</p> -->
+            <p style="font-size:10rem; "><b>RiSAWOZ</b></p>
+            <p style="font-size:4rem; ">A Large-Scale Multi-Domain Wizard-of-Oz Dataset with Rich Semantic Annotations for Task-Oriented Dialogue Modeling</p>
+
+        </div>
+    </div>
+
+
+    <div class="cover" id="contentCover">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 thumb">
+            <div class="infoCard">
+              <div class="infoBody">
+			  
+			  
+			  
+			  
+                <div class="infoHeadline">
+                  <h2>Abstract</h2>
+                </div>
+                <p>
+					In order to alleviate the shortage of multi-domain data and to capture discourse phenomena for task-oriented dialogue modeling, we propose RiSAWOZ, a large-scale multi-domain Chinese Wizard-of-Oz dataset with Rich Semantic Annotations. RiSAWOZ contains 11.2K human-to-human (H2H) multi-turn semantically annotated dialogues, with more than 150K utterances spanning over 12 domains, which is larger than all previous annotated H2H conversational datasets. Both single- and multi-domain dialogues are constructed, accounting for 65% and 35%, respectively. Each dialogue is labeled with comprehensive dialogue annotations, including dialogue goal in the form of natural language description, domain, dialogue states and acts at both the user and system side. In addition to traditional dialogue annotations, we especially provide linguistic annotations on discourse phenomena, e.g., ellipsis and coreference, in dialogues, which are useful for dialogue coreference and ellipsis resolution tasks. Apart from the fully annotated dataset, we also present a detailed description of the data collection procedure, statistics and analysis of the dataset. A series of benchmark models and results are reported, including natural language understanding (intent detection & slot filling), dialogue state tracking and dialogue context-to-text generation, as well as coreference and ellipsis resolution, which facilitate the baseline comparison for future research on this corpus.		
+				
+				
+				</p>
+
+                <p>
+                <a class="btn actionBtn" href="https://arxiv.org/abs/2010.08738" target="_blank">RiSAWOZ Paper (Quan et al. EMNLP '20)</a>
+                </p>
+                <hr>
+
+
+
+
+
+                <div class="infoHeadline">
+                  <h2> Data statistics of RiSAWOZ</h2>
+                </div>
+                <p>
+                <img src="image/RiSAWOZ_STATISTICS.png" class="img-responsive mx-auto d-block"/>
+				The average numbers of turns and coreference clusters are for each dialogue. The average numbers of tokens and dialogue acts are for each turn. U-acts and s-acts represent user and system acts respectively.
+                </p>
+				<br/>
+				<p>
+                <img src="image/RiSAWOZ_STATISTICS_2.png" class="img-responsive mx-auto d-block"/>
+				 Statistics on utterances containing ellipsis and coreference.
+                </p>
+                <hr>
+
+
+
+
+
+
+                <div class="infoHeadline">
+                  <h2>Getting Started</h2>
+                </div>
+
+                <p>The RiSAWOZ dataset is available:</p>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a class="btn actionBtn inverseBtn" href="https://github.com/terryqj0107/RiSAWOZ" download>RiSAWOZ</a></li>
+                  </ul>
+                </p>
+
+
+
+
+
+
+                <div class="infoHeadline">
+                  <h2>License</h2>
+                </div>
+
+                <p>
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>
+                </p>
+
+
+
+				
+                
+                <hr>
+
+                <div class="infoHeadline">
+                  <h2>Have Questions?</h2>
+                </div>
+                <p>For any issue, email to <a href="mailto:dyxiong@tju.edu.cn" target="_blank">dyxiong@tju.edu.cn</a>. <br>
+                  <!--For submission issues, please email Hong Wang at <a href="mailto:hongwang600@cs.ucsb.edu" target="_blank">hongwang600@cs.ucsb.edu</a>. -->
+                </p>
+                <p>
+                </p>                
+                <hr>
+
+                </div>
+            </div>
+          </div>
+
+
+
+		<div class="infoHeadline">
+			 <h1>An example of RiSAWOZ</h1>
+		</div>
+		<p>
+		   <img src="image/RISAWOZ.png" class="img-responsive mx-auto d-block" width=600/>
+		   A dialogue example spanning over multiple domains. We show dialogue annotations and necessary linguistic annotations (green words for ellipsis resolution and green box for coreference clusters) for each user utterance (in yellow callout) and system utterance (in blue callout).
+		</p>
+			
+			
+		<div class="infoHeadline">
+			 <h1>Comparison of RiSAWOZ to others</h1>
+		</div>
+		<p>
+		   <img src="image/RISAWOZ_COMPARISON.png" class="img-responsive mx-auto d-block" width=660/>
+		   Comparison of our dataset to other task-oriented dialogue datasets (training set). H2H, H2M, M2M represent human-to-human, human-to-machine, machine-to-machine respectively.
+		</p>
+
+
+
+		<div class="infoHeadline">
+		  <h1>Benchmark</h1>
+		</div>
+		<p>
+		<img src="image/risawoz_results.png" class="img-responsive mx-auto d-block" width=660/>
+		Performance of benchmark models on single-domain, multi-domain and all dialogues of test set. 
+		</p>
+
+
+
+
+		<div class="infoHeadline">
+		  <h1>Citations</h1>
+		</div>
+
+		<p>If you use RiSAWOZ in your work, please cite our paper. The bibtex is listed below:</p>
+
+		<pre><code>@article{quan2020risawoz, 
+ title={RiSAWOZ: A Large-Scale Multi-Domain Wizard-of-Oz Dataset with Rich Semantic Annotations for Task-Oriented Dialogue Modeling}, 
+ author={Quan, Jun and Zhang, Shian and Cao, Qian and Li, Zizhong and Xiong, Deyi}, 
+ journal={arXiv preprint arXiv:2010.08738}, 
+ year={2020}}</code></pre>
+		
+
+         
+
+          
+
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-default navbar-static-bottom footer">
+      <div class="container clearfix">
+        <div class="rightNav">
+          <div>
+            <ul class="nav navbar-nav navbar-right">
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+
+</html>
